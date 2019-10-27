@@ -1,52 +1,58 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet} from 'react-native';
+import {View, Text, Image, StyleSheet, Alert} from 'react-native';
 import {Card} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
+import Swipeable from 'react-native-gesture-handler/Swipeable';
+import {LeftActions} from '../utils/SwipeableRow';
 
-//const TempCard = ({ cityId, city, temp, weatherIcon, humidity, wind, description, listTemp }) => {
-   const TempCard = (res) => {
+
+const TempCard = ({data, onDelete}) => {
     let options = {weekday: 'short'};
     let optionsDay = {month:'short', day:'2-digit'};    
    
     return(
-            <View >
-                <Card containerStyle={styles.container} key={res.res.cityId}>
+            <Swipeable
+                renderLeftActions={LeftActions}
+                onSwipeableLeftOpen={() =>{onDelete(data.cityId)}}
+               >
+                
+                <Card containerStyle={styles.container} key={data.cityId}>
                     <View style={styles.titleStyle}>
-                        <Text style={styles.textLeft}>{res.res.city}</Text>
-                        <Text  style={styles.textRight}>{new Date(res.res.searchDt * 1000).toLocaleDateString('pt-BR', optionsDay)}</Text>
+                        <Text style={styles.textLeft}>{data.city}</Text>
+                        <Text  style={styles.textRight}>{data.searchDt.toLocaleDateString('pt-BR', optionsDay)}</Text>
                     </View>
                                        
                     <Image 
                         style={styles.imageStyle}
-                        source={{uri: `http://openweathermap.org/img/wn/${res.res.weatherIcon}@2x.png`}}
+                        source={{uri: `http://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`}}
                     />
-                    <Text style={styles.tempText}>{res.res.temp} C°</Text>
-                    <Text style={styles.description}>{res.res.description}</Text>
+                    <Text style={styles.tempText}>{data.temp} C°</Text>
+                    <Text style={styles.description}>{data.description}</Text>
                     <View style={styles.wrapper}>
-                        <Icon iconStyle={{margin:10}} name='wind' size={12} />
-                        <Text style={styles.otherText}>{res.res.wind} m/s</Text>
+                        <Icon name='wind' size={12} />
+                        <Text style={styles.otherText}>{data.wind} m/s</Text>
                         <Icon iconStyle={{margin:10}} name='tint'  size={12} />
-                        <Text style={styles.otherText}>{res.res.humidity}%</Text>
+                        <Text style={styles.otherText}>{data.humidity}%</Text>
                     </View>
                     <View style={styles.wrapper}>
-                    {res.res.listTemp.map(list => (
+                    {data.listTemp.map(list => (
                         <View key={list.dt} style={styles.wrapperMini}>
                             <Image 
                                 style={styles.imageStylePQ}
-                                source={{uri: `http://openweathermap.org/img/wn/${list.weather[0].icon}.png`}}
+                                source={{uri: `http://openweathermap.org/img/wn/${list.icon}.png`}}
                             />
-                            <Text style={styles.textMini}>{new Date(list.dt * 1000).toLocaleDateString('pt-BR', options)}</Text>
+                            <Text style={styles.textMini}>{list.dt.toLocaleDateString('pt-BR', options)}</Text>
                         </View>
                     ))}     
                     </View>
                 </Card>
-            </View>
+            </Swipeable>
             );
 }
 
 const styles = StyleSheet.create ({
     container:{
-        backgroundColor:'#2A97B3',
+        backgroundColor:'#A9A9A9',
     },
     titleStyle:{
         flexDirection:'row',
@@ -70,7 +76,7 @@ const styles = StyleSheet.create ({
     wrapper:{
         flexDirection:'row',
         justifyContent:"center",
-        alignItems:"center"
+        alignItems:"center",
     },
     wrapperMini:{
         justifyContent:"center",

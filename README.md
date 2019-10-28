@@ -1,6 +1,6 @@
 # InstaTempo
 
-One Paragraph of project description goes here
+**InstaTempo** is an app that consumes the API provided by Open Weather Map. It allows you to view the current temperature and climate according to the device's geolocation, as well as allow you to search different cities of the world.
 
 ## Getting Started
 
@@ -19,7 +19,7 @@ Node v10.15.3
 To run the application execute the following on CMD prompt
 
 ```
-git clone
+git clone https://github.com/lekkinhah/InstaTempo.git
 cd InstaTempo
 npm install 
 ```
@@ -44,9 +44,11 @@ react-native run-ios
 ## APP Features
 
 ### Home Screen
+<p align="center">
 <img src="https://user-images.githubusercontent.com/5490967/67716871-5d352a80-f9ab-11e9-9f4f-37822561662f.jpeg" height="427" width="240">
+</p>
 
-This screen shows the weather using the GeoLocation of the device. On first use, authorization will be requested for access to user's location data.
+This screen shows the weather using the _GeoLocation_ of the device. On first use, authorization will be requested for access to user's location data.
 
 #### Info of Home Screen
 - City (GeoLocation)
@@ -56,18 +58,30 @@ This screen shows the weather using the GeoLocation of the device. On first use,
 - Wind speed (m/s)
 - Relative humidity (%)
 
-> API provides data in several languages, however Brazilian Portuguese is not available. The APP uses PT - Portugal
+> API provides multilanguage data, however Brazilian Portuguese is not available. The APP uses PT - Portugal
 
 The button directs the user to the search screen of more cities (Search Screen).
 
 ### Search Screen
+<p align="center">
 <img src="https://user-images.githubusercontent.com/5490967/67717279-2875a300-f9ac-11e9-9c65-f433411441dd.jpeg" height="427" width="240">
+  </p>
 
-This screen offers search of various cities through Searchbar. 
-Each result is presented on a card, creating a list of searches performed by the user. 
+This screen offers search of various cities through Searchbar. Each result is presented on a card, creating a list of searches performed by the user. 
+#### Info of Each Card
+- City and date
+- Icon of current weather
+- Current temperature (°C)
+- Description of current Weather
+- Wind speed (m/s)
+- Relative humidity (%)
+- Weather forecast for next five days
+
 Its possible to delete each card by swiping to the right.
 
+<p align="center">
 <img src="https://user-images.githubusercontent.com/5490967/67718663-f6b20b80-f9ae-11e9-8b95-f05885ffd200.jpeg" height="229" width="240">
+  </p>
 
 
 ## Built With
@@ -83,4 +97,4 @@ Its possible to delete each card by swiping to the right.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under GNU General Public License v3.0

@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Wed Oct 23 21:21:20 BRT 2019
+#Mon Oct 28 17:10:57 BRT 2019
 60.set=NATIVE_RESOURCE
 52.set=NATIVE_RESOURCE
 53.base=C\:\\Users\\lekki\\Dev\\InstaTempo\\android\\app\\build\\intermediates\\merged_assets\\debug\\out

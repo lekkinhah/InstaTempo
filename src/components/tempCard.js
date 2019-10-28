@@ -52,7 +52,9 @@ const TempCard = ({data, onDelete}) => {
 
 const styles = StyleSheet.create ({
     container:{
-        backgroundColor:'#A9A9A9',
+        backgroundColor:'#ffffff',
+        borderColor:'#DB7093',
+        borderRadius:15,
     },
     titleStyle:{
         flexDirection:'row',
@@ -69,7 +71,7 @@ const styles = StyleSheet.create ({
     textRight: {
         flex:1,
         textAlign:'right',
-        color:'#fff',
+        color:'#808080',
         fontWeight:"bold",
         textTransform:"uppercase",
     },

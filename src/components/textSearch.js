@@ -57,7 +57,8 @@ const TextSearch = ({units = 'metric', lang='pt', onSearch}) => {
           lightTheme={true}
           showLoading={loading}
           placeholder="Informe a cidade" 
-          placeholderTextColor="#4F4F4F"
+          placeholderTextColor="#a9a9a9"
+          inputStyle={{color:"#4F4F4F"}}
           value={cityName}
           onSubmitEditing={handleSearch} 
           returnKeyType='search'

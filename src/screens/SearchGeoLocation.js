@@ -67,12 +67,15 @@ console.log(data);
                     <Text style={styles.otherText}>{data.main && data.main.humidity} %</Text>
                 </View>
                 <View style={styles.buttonContainer}>
-                    <Button  type='outline' 
-                            containerStyle={{paddingHorizontal:10}} 
-                            buttonStyle={styles.buttonStyle} 
-                            titleStyle={styles.titleButtonStyle} 
-                            title='Próximos dias'/> 
-                    <Button  type='outline' 
+                     
+                    <Button type='outline' 
+                            icon={
+                                <Icon
+                                  name="search"
+                                  size={15}
+                                  color="#DB7093"
+                                />
+                              }
                             containerStyle={{paddingHorizontal:10}} 
                             buttonStyle={styles.buttonStyle} 
                             titleStyle={styles.titleButtonStyle}
@@ -133,7 +136,8 @@ const styles = StyleSheet.create({
         width:150,
     },
     titleButtonStyle:{
-        color:'#DB7093'
+        color:'#DB7093',
+        marginHorizontal:10
     },
 });
 

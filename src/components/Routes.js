@@ -15,6 +15,7 @@ export default createAppContainer (
             headerTintColor: '#000',
             headerBackTitle:null,
             headerTitle:"InstaTempo"
+            
         }
     })
 );

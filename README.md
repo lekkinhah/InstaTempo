@@ -1,10 +1,12 @@
 # InstaTempo
  APP de previsão do tempo
 
-Running the project
+
+
+Getting starded
 
 To run the application execute the following:
 - git clone
 - cd instaTempo
 - npm install
-- react-native run-android
+- react-native run-android | run-ios

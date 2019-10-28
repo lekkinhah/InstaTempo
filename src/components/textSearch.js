@@ -6,8 +6,7 @@ import {StyleSheet, View} from 'react-native';
 import {SearchBar, Overlay, Button, Text} from 'react-native-elements';
 
 
-const textSearch = ({units = 'metric', lang='pt', onSearch}) => {
-
+const TextSearch = ({units = 'metric', lang='pt', onSearch}) => {
 
   const [cityName, setCityName] = useState('');
   const [loading, setLoading] = useState(false);
@@ -17,18 +16,16 @@ const textSearch = ({units = 'metric', lang='pt', onSearch}) => {
     setLoading(true);
     try {
           let res = await axios.get(`${baseURL}weather?q=${cityName}&APPID=${apiKey}&units=${units}&lang=${lang}`);
-          //console.log(res.data);
+        
           let resMulti =  await axios.get(`${baseURL}forecast?id=${res.data.id}&APPID=${apiKey}&units=${units}&lang=${lang}`);
-          //console.log("dentro do search", resMulti);
 
           const resFilter = resMulti.data.list.filter(item => item.dt_txt.includes('12:00:00'));
-          //console.log("filtro", resFilter);
 
           const result = {
             searchDt:new Date(res.data.dt * 1000),
             cityId: res.data.id,
             city: res.data.name,
-            temp: res.data.main.temp, 
+            temp: res.data.main.temp.toFixed(0), 
             weatherIcon: res.data.weather[0].icon,
             description: res.data.weather[0].description,
             wind:res.data.wind.speed,
@@ -41,10 +38,8 @@ const textSearch = ({units = 'metric', lang='pt', onSearch}) => {
     } catch (error) {
         setAlert(true);
     }
-    
-    
-        setLoading(false);
-        setCityName('');
+      setLoading(false);
+      setCityName('');
   }
 
   return (
@@ -59,6 +54,7 @@ const textSearch = ({units = 'metric', lang='pt', onSearch}) => {
         </Overlay>
         <SearchBar 
           round={true}
+          lightTheme={true}
           showLoading={loading}
           placeholder="Informe a cidade" 
           placeholderTextColor="#4F4F4F"
@@ -92,4 +88,4 @@ const styles = StyleSheet.create ({
 
 });
 
-export default textSearch;
+export default TextSearch;

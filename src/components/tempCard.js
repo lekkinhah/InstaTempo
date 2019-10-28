@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, Image, StyleSheet, Alert} from 'react-native';
+import {View, Text, StyleSheet, Image} from 'react-native';
 import {Card} from 'react-native-elements';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {LeftActions} from '../utils/SwipeableRow';
+import {Icons} from '../utils/Icons';
 
 
 const TempCard = ({data, onDelete}) => {
@@ -13,8 +14,7 @@ const TempCard = ({data, onDelete}) => {
     return(
             <Swipeable
                 renderLeftActions={LeftActions}
-                onSwipeableLeftOpen={() =>{onDelete(data.cityId)}}
-               >
+                onSwipeableLeftOpen={() =>{onDelete(data.cityId)}}>
                 
                 <Card containerStyle={styles.container} key={data.cityId}>
                     <View style={styles.titleStyle}>
@@ -24,8 +24,8 @@ const TempCard = ({data, onDelete}) => {
                                        
                     <Image 
                         style={styles.imageStyle}
-                        source={{uri: `http://openweathermap.org/img/wn/${data.weatherIcon}@2x.png`}}
-                    />
+                        source={Icons[data.weatherIcon]}
+                        />
                     <Text style={styles.tempText}>{data.temp} C°</Text>
                     <Text style={styles.description}>{data.description}</Text>
                     <View style={styles.wrapper}>
@@ -35,19 +35,19 @@ const TempCard = ({data, onDelete}) => {
                         <Text style={styles.otherText}>{data.humidity}%</Text>
                     </View>
                     <View style={styles.wrapper}>
-                    {data.listTemp.map(list => (
-                        <View key={list.dt} style={styles.wrapperMini}>
-                            <Image 
-                                style={styles.imageStylePQ}
-                                source={{uri: `http://openweathermap.org/img/wn/${list.icon}.png`}}
-                            />
-                            <Text style={styles.textMini}>{list.dt.toLocaleDateString('pt-BR', options)}</Text>
-                        </View>
-                    ))}     
+                        {data.listTemp.map(list => (
+                            <View key={list.dt} style={styles.wrapperMini}>
+                                <Image 
+                                    style={styles.imageStylePQ}
+                                    source={Icons[list.icon]}
+                                />
+                                <Text style={styles.textMini}>{list.dt.toLocaleDateString('pt-BR', options)}</Text>
+                            </View>
+                        ))}     
                     </View>
                 </Card>
             </Swipeable>
-            );
+        );
 }
 
 const styles = StyleSheet.create ({
@@ -106,6 +106,7 @@ const styles = StyleSheet.create ({
     description:{
         fontSize: 16,
         textAlign:'center',
+        textTransform:'capitalize'
     },
     icon: {
         padding:15,

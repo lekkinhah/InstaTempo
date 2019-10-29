@@ -1,4 +1,4 @@
-#Mon Oct 28 17:10:56 BRT 2019
+#Tue Oct 29 18:15:46 BRT 2019
 base.0=C\:\\Users\\lekki\\Dev\\InstaTempo\\android\\app\\build\\intermediates\\transforms\\dexMerger\\debug\\0
 path.0=classes.dex
 renamed.0=classes.dex

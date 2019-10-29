@@ -5,8 +5,8 @@ INJECTED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest
 INJECTED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:1:1-27:12
 INJECTED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:1:1-27:12
 MERGED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:1:1-27:12
-MERGED from [:react-native-gesture-handler] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:react-native-vector-icons] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
+MERGED from [:react-native-gesture-handler] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-11:12
 MERGED from [:@react-native-community_geolocation] C:\Users\lekki\Dev\InstaTempo\node_modules\@react-native-community\geolocation\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-9:12
 MERGED from [com.facebook.react:react-native:0.61.2] C:\Users\lekki\.gradle\caches\transforms-2\files-2.1\921ea9b621cffad02bd8bcd53d0130f6\AndroidManifest.xml:2:1-13:12
 MERGED from [org.webkit:android-jsc:r245459] C:\Users\lekki\.gradle\caches\transforms-2\files-2.1\8fa4d96411adb589b32416abdca0eca1\AndroidManifest.xml:2:1-11:12
@@ -93,13 +93,13 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\le
 	tools:ignore
 		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\debug\AndroidManifest.xml:7:75-114
 	android:roundIcon
-		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:11:7-52
-		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:11:7-52
+		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:11:7-41
+		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:11:7-41
 	tools:targetApi
 		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\debug\AndroidManifest.xml:7:54-74
 	android:icon
-		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:10:7-41
-		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:10:7-41
+		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:10:7-36
+		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:10:7-36
 	android:allowBackup
 		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:12:7-34
 		ADDED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml:12:7-34
@@ -139,10 +139,10 @@ uses-sdk
 INJECTED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml
 INJECTED from C:\Users\lekki\Dev\InstaTempo\android\app\src\main\AndroidManifest.xml
-MERGED from [:react-native-gesture-handler] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
-MERGED from [:react-native-gesture-handler] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:react-native-vector-icons] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-vector-icons\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
+MERGED from [:react-native-gesture-handler] C:\Users\lekki\Dev\InstaTempo\node_modules\react-native-gesture-handler\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:7:5-9:41
 MERGED from [:@react-native-community_geolocation] C:\Users\lekki\Dev\InstaTempo\node_modules\@react-native-community\geolocation\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [:@react-native-community_geolocation] C:\Users\lekki\Dev\InstaTempo\node_modules\@react-native-community\geolocation\android\build\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-7:41
 MERGED from [com.facebook.react:react-native:0.61.2] C:\Users\lekki\.gradle\caches\transforms-2\files-2.1\921ea9b621cffad02bd8bcd53d0130f6\AndroidManifest.xml:7:5-9:41

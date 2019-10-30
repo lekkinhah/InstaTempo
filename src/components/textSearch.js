@@ -4,6 +4,7 @@ import {baseURL} from '../services/api';
 import apiKey from '../utils/apiKey';
 import {StyleSheet, View} from 'react-native';
 import {SearchBar, Overlay, Button, Text} from 'react-native-elements';
+import { any } from 'prop-types';
 
 
 const TextSearch = ({units = 'metric', lang='pt', onSearch}) => {
@@ -53,8 +54,9 @@ const TextSearch = ({units = 'metric', lang='pt', onSearch}) => {
                    </View>
         </Overlay>
         <SearchBar 
-          round={true}
-          lightTheme={true}
+          //round={true}
+          //lightTheme={true}
+          platform={"android"}
           showLoading={loading}
           placeholder="Informe a cidade" 
           placeholderTextColor="#a9a9a9"

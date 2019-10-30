@@ -13,7 +13,7 @@ const SearchMultiCard = () => {
   }
   
     return (
-      <View style={{ flex: 1 }}>
+      <View style={{ flex: 1}}>
         <View style={{justifyContent:"center"}}>
         <TextSearch onSearch={(result) => {
             let addNewCard = true;

@@ -4,6 +4,7 @@ import {createStackNavigator} from 'react-navigation-stack';
 
 import SearchMultiCard from '../screens/SearchMultiCard';
 import SearchGeoLocation from '../screens/SearchGeoLocation';
+import { Image } from 'react-native';
 
 
 export default createAppContainer (
@@ -14,7 +15,18 @@ export default createAppContainer (
         defaultNavigationOptions: {
             headerTintColor: '#000',
             headerBackTitle:null,
-            headerTitle:"InstaTempo"
+            headerTitle:(
+                <Image 
+                    resizeMode='cover'
+                    style={{
+                        width:150,
+                        height:40,
+                        resizeMode:'contain',
+                        alignSelf:'center',
+                    }} 
+                    source={require('../images/logo.png')}
+                    />
+                ),
             
         }
     })

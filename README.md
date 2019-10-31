@@ -40,6 +40,13 @@ or
 ```
 react-native run-ios
 ```
+**_!IMPORTANT 2!_**
+This project consumes the Open Weather API data, for security reasons the apiKey.js file has been omitted from GitHub, so to run the project you must register on the API site and purchase an ApiKey.
+After receiving the Key, create a file named apiKey.js in the / src / utils folder with the following structure:
+
+```
+export default apiKey = "XXXXXXXXX";
+```
 
 ## APP Features
 
